@@ -37,6 +37,9 @@ class MyHomePage extends StatelessWidget {
                 fontSize: 18,
                ),
               ),
+              SizedBox(
+                height: 100,
+              ),
             ],
           ),
         ),
