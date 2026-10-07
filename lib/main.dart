@@ -16,6 +16,8 @@ class MyHomePage extends StatelessWidget {
           title: Text("Play Dice",
            style: TextStyle(
             color: Color(0xFFA791D0),
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
            ),
           ),
         ),
