@@ -24,12 +24,20 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
-          children: [
-            SizedBox(
-              height: 50,
-            ),
-          ],
+        body: Center(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Text("Total is 2",
+               style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+               ),
+              ),
+            ],
+          ),
         ),
       ),
     );
