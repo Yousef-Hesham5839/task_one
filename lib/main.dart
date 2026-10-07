@@ -25,7 +25,11 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         body: Column(
-          children: [],
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+          ],
         ),
       ),
     );
