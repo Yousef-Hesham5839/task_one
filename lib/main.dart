@@ -45,6 +45,9 @@ class MyHomePage extends StatelessWidget {
                 height: 180,
                 child: Image.asset("assets/1.jpg"),
               ),
+              SizedBox(
+                height: 100,
+              ),
             ],
           ),
         ),
