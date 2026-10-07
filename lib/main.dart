@@ -13,7 +13,11 @@ class MyHomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Play Dice"),
+          title: Text("Play Dice",
+           style: TextStyle(
+            color: Color(0xFFA791D0),
+           ),
+          ),
         ),
       )
     );
