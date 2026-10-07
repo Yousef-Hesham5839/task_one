@@ -14,12 +14,14 @@ class MyHomePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF68548E),
-          title: Text("Play Dice",
-           style: TextStyle(
-            color: Color(0xFFA791D0),
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-           ),
+          title: Center(
+            child: Text("Play Dice",
+             style: TextStyle(
+              color: Color(0xFFA791D0),
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+             ),
+            ),
           ),
         ),
       )
