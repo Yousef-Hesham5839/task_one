@@ -12,6 +12,7 @@ class MyHomePage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Color(0xFF151218),
         appBar: AppBar(
           backgroundColor: Color(0xFF68548E),
           title: Center(
