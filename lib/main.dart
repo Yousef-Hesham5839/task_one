@@ -65,6 +65,16 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
+                  ElevatedButton(onPressed: (){}, 
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFF44336),
+                      foregroundColor: Color(0xFFF87D38),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                    ),
+                    child: Text("roll"),
+                  )
                 ],
               ),
               
