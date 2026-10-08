@@ -65,7 +65,10 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  ButtonWidget()
+                  ButtonWidget(),
+                  SizedBox(
+                    width: 10,
+                  ),
                 ],
               ),
               
