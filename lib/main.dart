@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   ButtonWidget(buttonTitle: "roll", onPressed: rollDice),
                   SizedBox(width: 10),
-                  ButtonWidget(buttonTitle: "reset", onPressed: () {}),
+                  ButtonWidget(buttonTitle: "reset", onPressed: reset),
                 ],
               ),
             ],
