@@ -50,8 +50,9 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  NumberContainer()
+                  NumberContainer(),
                 ],)
+              
             ],
           ),
         ),
@@ -67,19 +68,22 @@ class NumberContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: Color(0xFFD3BCFD),
-      ),
-      padding: EdgeInsets.all(5),
-      child: Text("1", 
-       style: TextStyle(
-        fontSize: 50,
-        color: Color(0xFF151218),
-        fontWeight: FontWeight.bold,
-        height: 1,
-       ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Color(0xFFD3BCFD),
+        ),
+        padding: EdgeInsets.fromLTRB(18, 5, 18, 5),
+        child: Text("1", 
+         style: TextStyle(
+          fontSize: 50,
+          color: Color(0xFF151218),
+          fontWeight: FontWeight.bold,
+          height: 1,
+         ),
+        ),
       ),
     );
   }
