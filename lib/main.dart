@@ -65,24 +65,35 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Expanded(
-                    child: ElevatedButton(onPressed: (){}, 
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFF44336),
-                        foregroundColor: Colors.yellow,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                      ),
-                      child: Text("roll"),
-                    ),
-                  )
+                  ButtonWidget()
                 ],
               ),
               
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ButtonWidget extends StatelessWidget {
+  const ButtonWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ElevatedButton(onPressed: (){}, 
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xFFF44336),
+          foregroundColor: Colors.yellow,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6),
+          ),
+        ),
+        child: Text("roll"),
       ),
     );
   }
