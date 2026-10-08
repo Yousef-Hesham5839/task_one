@@ -50,8 +50,17 @@ class MyHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
+                  SizedBox(
+                   width: 50,
+                  ),
                   NumberContainer(),
-                ],)
+                  SizedBox(
+                   width: 165,
+                  ),
+                  NumberContainer(),
+                ],
+              ),
+              
               
             ],
           ),
