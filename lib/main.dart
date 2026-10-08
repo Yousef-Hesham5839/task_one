@@ -29,6 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       if (total > 10) {
         image = "assets/2.jpg";
+      } else {
+        image = "assets/1.jpg";
       }
     });
   }
