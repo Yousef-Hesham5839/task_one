@@ -21,6 +21,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final Random random = Random();
 
+  void rollDice() {
+    setState(() {
+      dice1 = random.nextInt(6) + 1;
+      dice2 = random.nextInt(6) + 1;
+      total = dice1 + dice2;
+
+      if (total > 10) {
+        image = "assets/2.jpg";
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
