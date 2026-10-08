@@ -69,6 +69,7 @@ class MyHomePage extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
+                  ButtonWidget(),
                 ],
               ),
               
