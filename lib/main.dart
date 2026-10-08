@@ -33,6 +33,15 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void reset() {
+    setState(() {
+      dice1 = 1;
+      dice2 = 1;
+      total = 2;
+      image = "assets/1.jpg";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,15 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 100),
               Row(
                 children: [
-                  ButtonWidget(
-                    buttonTitle: "roll",
-                    onPressed: rollDice,
-                  ),
+                  ButtonWidget(buttonTitle: "roll", onPressed: rollDice),
                   SizedBox(width: 10),
-                  ButtonWidget(
-                    buttonTitle: "reset",
-                    onPressed: (){},
-                  )
+                  ButtonWidget(buttonTitle: "reset", onPressed: () {}),
                 ],
               ),
             ],
@@ -94,7 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key, required this.buttonTitle, required this.onPressed});
+  const ButtonWidget({
+    super.key,
+    required this.buttonTitle,
+    required this.onPressed,
+  });
 
   final String buttonTitle;
   final VoidCallback onPressed;
