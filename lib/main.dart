@@ -57,27 +57,33 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SizedBox(height: 50),
               Text(
-                "Total is 2",
+                "Total is $total",
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
               SizedBox(height: 100),
-              SizedBox(
-                width: 250,
-                height: 180,
-                child: Image.asset("assets/1.jpg"),
-              ),
+              SizedBox(width: 250, height: 180, child: Image.asset(image)),
               SizedBox(height: 100),
               Row(
                 children: [
                   SizedBox(width: 50),
-                  NumberContainer(),
+                  NumberContainer(dice: dice1),
                   SizedBox(width: 165),
-                  NumberContainer(),
+                  NumberContainer(dice: dice2),
                 ],
               ),
               SizedBox(height: 100),
               Row(
-                children: [ButtonWidget(), SizedBox(width: 10), ButtonWidget()],
+                children: [
+                  ButtonWidget(
+                    buttonTitle: "roll",
+                    onPressed: rollDice,
+                  ),
+                  SizedBox(width: 10),
+                  ButtonWidget(
+                    buttonTitle: "reset",
+                    onPressed: (){},
+                  )
+                ],
               ),
             ],
           ),
@@ -88,26 +94,31 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({super.key});
+  const ButtonWidget({super.key, required this.buttonTitle, required this.onPressed});
+
+  final String buttonTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: Color(0xFFF44336),
           foregroundColor: Colors.yellow,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         ),
-        child: Text("roll"),
+        child: Text(buttonTitle),
       ),
     );
   }
 }
 
 class NumberContainer extends StatelessWidget {
-  const NumberContainer({super.key});
+  const NumberContainer({super.key, required this.dice});
+
+  final int dice;
 
   @override
   Widget build(BuildContext context) {
@@ -120,7 +131,7 @@ class NumberContainer extends StatelessWidget {
         ),
         padding: EdgeInsets.fromLTRB(18, 5, 18, 5),
         child: Text(
-          "1",
+          "$dice",
           style: TextStyle(
             fontSize: 50,
             color: Color(0xFF151218),
