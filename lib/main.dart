@@ -18,6 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int dice2 = 1;
   int total = 2;
   String image = "assets/1.jpg";
+  String result = "You Lose";
 
   final Random random = Random();
 
@@ -29,8 +30,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
       if (total > 10) {
         image = "assets/2.jpg";
+        result = "You Win";
       } else {
         image = "assets/1.jpg";
+        result = "You Lose";
       }
     });
   }
@@ -48,6 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xFF68548E),
+          brightness: Brightness.dark,
+        ),
+      ),
+
       home: Scaffold(
         backgroundColor: Color(0xFF151218),
         appBar: AppBar(
@@ -69,10 +79,24 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 50),
               Text(
                 "Total is $total",
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  color: Colors.white,
+                ),
               ),
               SizedBox(height: 100),
-              SizedBox(width: 250, height: 180, child: Image.asset(image)),
+              SizedBox(
+                width: 250,
+                height: 180,
+                child: Image.asset(image)
+              ),
+              SizedBox(height: 20),
+              Text(
+                result, 
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               SizedBox(height: 100),
               Row(
                 children: [
