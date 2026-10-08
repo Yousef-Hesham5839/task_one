@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,11 +14,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
   int dice1 = 1;
   int dice2 = 1;
   int total = 2;
   String image = "assets/1.jpg";
+
+  final Random random = Random();
 
   @override
   Widget build(BuildContext context) {
